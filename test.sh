@@ -1,8 +1,16 @@
-echo "Enter value for n"
-n= read n
-a=`fact $n`
-echo "Enter Value for r"
-r= read r
-b=`fact $r`
-
-echo "$a,$b"
+echo "Enter a number "
+read n
+a = 0
+b = 1
+count = 2
+echo "Fibonacci series"
+echo $a
+echo $b
+while [ $count -le $n ]:
+do 
+  fib = 'expr $a + $b'
+  a = $b
+  b = $fib
+  echo $fib
+  count = "expr $count + 1"
+done

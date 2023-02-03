@@ -11,6 +11,6 @@ do
 	fib=`expr $a + $b`
 	a=$b
 	b=$fib
-echo $fib
-count=`expr $count + 1`
+	echo $fib
+	count=`expr $count + 1`
 done
