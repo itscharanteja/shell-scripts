@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo "Enter student number:"
 read snum
 

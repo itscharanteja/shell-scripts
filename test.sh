@@ -1,16 +1,18 @@
-echo "Enter the value of n \c"
+echo "enter a num"
 read n
-a=0
-b=1
-count=2
-echo "Fibonacci series:"
-echo $a
-echo $b
-while [ $count -le $n ]
+
+temp=$n
+sum=0
+while [ $temp -gt 0 ]
 do
-	fib=`expr $a + $b`
-	a=$b
-	b=$fib
-	echo $fib
-	count=`expr $count + 1`
+  dig=$((temp % 10))
+  len=${#n}
+  sum=$((sum + dig ** len))
+  temp=$((temp / 10))
 done
+
+if [ $sum -eq $n ];then
+  echo "$n is an armstrong"
+else
+  echo "$n is not an armstrong"
+fi

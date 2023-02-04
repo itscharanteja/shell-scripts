@@ -8,8 +8,8 @@ echo $a
 echo $b
 while [ $count -le $n ]
 do
-	fib=`expr $a + $b`
-	a=$b
+    fib=`expr $a + $b`
+    a=$b
 	b=$fib
 	echo $fib
 	count=`expr $count + 1`

@@ -1,22 +1,20 @@
 #!/bin/bash
+read -a num
+big=${num[0]}
+smal=${num[0]}
 
-read -a integers
-
-biggest=${integers[0]}
-smallest=${integers[0]}
-
-for i in ${integers[@]}
+for i in ${num[@]}
 do
-     if [[ $i -gt $biggest ]]
-     then
-        biggest="$i"
-     fi
+  if [[ $i -gt $big ]]
+   then 
+    big="$i"
+   fi
 
-     if [[ $i -lt $smallest ]]
-     then
-        smallest="$i"
-     fi
+   if [[ $i -lt $smal ]]
+   then 
+    smal="$i"
+   fi
 done
 
-echo "The largest number is $biggest"
-echo "The smallest number is $smallest"
+echo "big : $big"
+echo "small : $smal"

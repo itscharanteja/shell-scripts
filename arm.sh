@@ -1,31 +1,18 @@
-echo "Program to check armstrong number"
 echo "Enter a number: "
-read c
-function armstrong {
-  x=$1
-  sum=0
-  r=0
-  n=0
-  l=${#x}
-while [ $x -gt 0 ]
+read n
+
+temp=$n
+sum=0
+while [ $temp -gt 0 ]
 do
-  r=`expr $x % 10`
-
-  n=$(bc <<< "$r^$l")
-
-  sum=`expr $sum + $n`
-
-  x=`expr $x / 10`
+  dig=$((temp % 10))
+  len=${#n}
+  sum=$((sum + dig ** len))
+  temp=$((temp / 10))
 done
 
-if [ $sum -eq $c ]
-then
-  echo "It is an Armstrong Number."
+if [ $sum -eq $n ];then
+  echo "$n is an armstrong number."
 else
-  echo "It is not an Armstrong Number."
+  echo "$n is not an armstrong number."
 fi
-
-}
-
-result=`armstrong $c`
-echo $result
