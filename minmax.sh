@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Enter numbers"
 read -a num
 big=${num[0]}
 smal=${num[0]}
